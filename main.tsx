@@ -10,7 +10,7 @@ const handler = (req: Request) => html({
       style="background-image:url('https://dash.deno.com/assets/background-pattern.svg')"
     >
       <h1 class="text-4xl font-bold">哈罗，大家好！</h1>
-      <p class="mt-2 text-lg text-center text-gray-600">欢迎来到郭永明程序开发技术交流中心</p>
+      <p class="mt-2 text-lg text-center text-gray-600">欢迎来到杨超序开发技术交流中心</p>
       <footer class="fixed bottom-8 w-full h-6 flex items-center justify-center gap-2 text-gray-800">
         Powered by
         <a
@@ -25,4 +25,4 @@ const handler = (req: Request) => html({
   ),
 });
 
-serve(handler);    
+serve(handler);   
