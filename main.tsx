@@ -18,8 +18,6 @@ const handler = (req: Request) => html({
           class="flex items-center gap-2 text-sm text-black no-underline font-semibold"
           href="https://deno.com/deploy"
         >
-          
-          <img alt="Deno" src="https://dash.deno.com/assets/logo.svg" class="w-5" /> Deno Deploy
         </a>
       </footer>
     </div>
