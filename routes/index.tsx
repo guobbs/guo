@@ -32,7 +32,7 @@ function PostCard(props: { post: Post }) {
           {post.title}
         </h3>
         <time class="text-gray-500">
-          {new Date(post.publishedAt).toLocaleDateString("en-us", {
+          {new Date(post.publishedAt).toLocaleDateString("zh-CN", {
             year: "numeric",
             month: "long",
             day: "numeric",

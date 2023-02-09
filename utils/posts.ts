@@ -1,7 +1,7 @@
 import { extract } from "https://deno.land/std@0.175.0/encoding/front_matter/any.ts";
 import { join } from "https://deno.land/std@0.175.0/path/mod.ts";
 
-import { toString } from "./string.ts";
+import { toObject, toString } from "./string.ts";
 
 export interface Post {
   slug: string;
@@ -18,7 +18,7 @@ export async function getPost(slug: string): Promise<Post | null> {
   return {
     slug,
     title: toString(attrs.title),
-    publishedAt: new Date(toString(attrs.published_at)),
+    publishedAt: new Date(toObject(attrs.published_at)),
     content: body,
     snippet: toString(attrs.snippet),
   };
