@@ -1,13 +1,12 @@
-/// <reference no-default-lib="true" />
-/// <reference lib="dom" />
-/// <reference lib="dom.iterable" />
-/// <reference lib="dom.asynciterable" />
-/// <reference lib="deno.ns" />
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-import { start } from "$fresh/server.ts";
-import manifest from "./fresh.gen.ts";
+const router = new Router();
+router.get("/", (context) => {
+    context.response.body = "Hello world!";
+});
 
-import twindPlugin from "$fresh/plugins/twind.ts";
-import twindConfig from "./twind.config.ts";
+const app = new Application();
+app.use(router.routes());
+app.use(router.allowedMethods());
 
-await start(manifest, { plugins: [twindPlugin(twindConfig)] });
+await app.listen({ port: 443 });
